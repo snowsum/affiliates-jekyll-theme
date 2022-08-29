@@ -1,20 +1,19 @@
 <!-- begin post -->
 {% assign author = site.authors[post.author] %}
-<div class="side-trending-list">
+<div class="blog-style5 d-flex d-md-block d-xl-flex align-items-center mb-3">
     <a href="{{ post.url | absolute_url }}">
         {% if post.image %} <img class="rounded side-featured-image" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}"> {% endif %}
     </a>
-    <div class="card-block">
-        <h6 class="card-title h6 serif-font"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h6>
-        <div class="metafooter">
-            <div class="wrapfooter small d-flex align-items-center">
+    <div class="post-content pt-md-2 pt-xl-0 pt-0">
+        <h6 class="post-title"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h6>
+            <div class="post-meta">
                 <span class="author-meta">
                 By  <span class="post-name"> {% if post.author %}{{ author.display_name }}{% else %}{{ site.author }}{% endif %}, </span>             
                 on <span class="post-date">{{ post.date | date_to_string }}</span>
                 </span>               
                 <div class="clearfix"></div>
             </div>
-        </div>
+        
     </div>
 </div>
 <!-- end post -->
