@@ -1,7 +1,16 @@
 <div class="sidebar sticky-top"> 
     <div class="sidebar-section">
         <h5><span>Trending Now</span></h5>
-        {% include postbox.html %}
+        <div class="row">
+  {% for post in site.posts %}
+      {% if post.featured == true %}
+          <div class="col-md-4 mb-5">
+          {% include postbox.html %}
+          </div>
+      {% endif %}
+  {% endfor %}
+  </div>
+</div>
     </div>
     
     <div class="sidebar-section">
